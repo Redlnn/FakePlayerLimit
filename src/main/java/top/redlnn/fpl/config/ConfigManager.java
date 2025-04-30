@@ -1,10 +1,10 @@
-package icu.harmo.fpl.config;
+package top.redlnn.fpl.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
-import icu.harmo.fpl.FakePlayerLimitLogger;
+import top.redlnn.fpl.FakePlayerLimitLogger;
 
 import java.io.File;
 import java.io.FileNotFoundException;

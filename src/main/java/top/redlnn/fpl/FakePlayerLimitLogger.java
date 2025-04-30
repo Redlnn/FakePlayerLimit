@@ -1,9 +1,9 @@
-package icu.harmo.fpl;
+package top.redlnn.fpl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static icu.harmo.fpl.FakePlayerLimitMod.MOD_NAME;
+import static top.redlnn.fpl.FakePlayerLimitMod.MOD_NAME;
 
 public class FakePlayerLimitLogger {
     private static final FakePlayerLimitLogger INSTANCE = new FakePlayerLimitLogger();

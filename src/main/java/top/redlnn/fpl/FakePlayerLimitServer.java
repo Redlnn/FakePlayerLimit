@@ -1,4 +1,4 @@
-package icu.harmo.fpl;
+package top.redlnn.fpl;
 
 import carpet.CarpetExtension;
 import carpet.CarpetServer;

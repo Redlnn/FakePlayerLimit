@@ -1,12 +1,12 @@
-package icu.harmo.fpl.mixin;
+package top.redlnn.fpl.mixin;
 
 import carpet.commands.PlayerCommand;
 import carpet.utils.Messenger;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
-import icu.harmo.fpl.FakePlayerLimitSettings;
-import icu.harmo.fpl.config.FakePlayerLimitConfig;
+import top.redlnn.fpl.FakePlayerLimitSettings;
+import top.redlnn.fpl.config.FakePlayerLimitConfig;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;

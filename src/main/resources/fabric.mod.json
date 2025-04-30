@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "icu.harmo.fpl.FakePlayerLimitMod"
+      "top.redlnn.fpl.FakePlayerLimitMod"
     ]
   },
   "mixins": [

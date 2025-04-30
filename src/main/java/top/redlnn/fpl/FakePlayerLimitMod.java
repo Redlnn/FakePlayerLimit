@@ -1,6 +1,6 @@
-package icu.harmo.fpl;
+package top.redlnn.fpl;
 
-import icu.harmo.fpl.config.FakePlayerLimitConfig;
+import top.redlnn.fpl.config.FakePlayerLimitConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;

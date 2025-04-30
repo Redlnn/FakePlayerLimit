@@ -1,6 +1,6 @@
-package icu.harmo.fpl.config;
+package top.redlnn.fpl.config;
 
-import icu.harmo.fpl.FakePlayerLimitMod;
+import top.redlnn.fpl.FakePlayerLimitMod;
 
 import java.io.IOException;
 import java.util.ArrayList;
