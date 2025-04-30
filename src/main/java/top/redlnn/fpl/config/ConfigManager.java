@@ -17,6 +17,8 @@ import java.nio.file.StandardCopyOption;
 
 public final class ConfigManager {
     private static final FakePlayerLimitLogger LOGGER = FakePlayerLimitLogger.getInstance();
+
+    @SuppressWarnings("deprecation")
     private static final Gson GSON = new GsonBuilder()
             .enableComplexMapKeySerialization()
             .setPrettyPrinting()
