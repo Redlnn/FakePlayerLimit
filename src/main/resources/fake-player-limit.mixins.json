@@ -3,7 +3,8 @@
   "package": "top.redlnn.fpl.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "top.redlnn.fpl.mixin.PlayerCommandMixin"
+    "EntityPlayerMPFakeMixin",
+    "PlayerCommandMixin"
   ],
   "injectors": {
     "defaultRequire": 1
