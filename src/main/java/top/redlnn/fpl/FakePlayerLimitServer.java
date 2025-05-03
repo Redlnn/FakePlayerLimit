@@ -11,10 +11,6 @@ public class FakePlayerLimitServer implements CarpetExtension {
     private FakePlayerLimitServer() {
     }
 
-    public static FakePlayerLimitServer getInstance() {
-        return INSTANCE;
-    }
-
     public static void init() {
         CarpetServer.manageExtension(INSTANCE);
     }
