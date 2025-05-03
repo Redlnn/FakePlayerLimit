@@ -1,9 +1,9 @@
 package top.redlnn.fpl;
 
-import top.redlnn.fpl.config.FakePlayerLimitConfig;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import top.redlnn.fpl.config.FakePlayerLimitConfig;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,24 +19,21 @@ public class FakePlayerLimitMod implements ModInitializer {
     @Override
     public void onInitialize() {
         String version = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(RuntimeException::new).getMetadata().getVersion().getFriendlyString();
+        FakePlayerLimitConfig config;
 
         try {
-            FakePlayerLimitConfig config = FakePlayerLimitConfig.read();
+            config = FakePlayerLimitConfig.read();
             LOGGER.info("v{} loaded!", version);
-
-            ServerLifecycleEvents.SERVER_STOPPED.register((server -> {
-                try {
-                    config.fakePlayerMaps = new HashMap<>();
-                    FakePlayerLimitConfig.save(config);
-                    LOGGER.info("数据保存完成");
-                } catch (IOException e) {
-                    LOGGER.error("数据保存失败", e);
-                }
-            }));
         } catch (IOException e) {
             LOGGER.error("配置文件读取失败，将不可用！", e);
             return;
         }
+
+        ServerLifecycleEvents.SERVER_STOPPED.register((server -> {
+            config.fakePlayerMaps = new HashMap<>();
+            FakePlayerLimitConfig.save(config);
+            LOGGER.info("数据保存完成");
+        }));
         FakePlayerLimitServer.init();
     }
 }
