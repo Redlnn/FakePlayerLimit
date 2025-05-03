@@ -9,10 +9,10 @@ import top.redlnn.fpl.config.FakePlayerLimitConfig;
 
 import java.util.ArrayList;
 
-@Mixin(EntityPlayerMPFake.class)
-public class EntityPlayerMPFakeMixin {
+@Mixin(value = EntityPlayerMPFake.class)
+public class EntityPlayerMPFakeMixin  {
 
-    @Inject(method = "kill(Lnet/minecraft/text/Text;)V", at = @At("TAIL"), remap = false)
+    @Inject(method = "kill(Lnet/minecraft/server/world/ServerWorld;)V", at = @At("HEAD"))
     private void killMixin(CallbackInfo ci) {
         EntityPlayerMPFake player = (EntityPlayerMPFake) (Object) this;
 
